@@ -1,0 +1,266 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.logoImg {
+    height: 50px;
+    width: 50px;
+    flex-grow: 0;
+    border-radius: 50%;
+    margin: 0 25px 0 0;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 4.6vh;
+    flex: 0 0 auto;
+    background-color:aqua;
+    padding: 10px;
+    font-size: 0.7rem;
+    font-weight: 100;
+    position: sticky;
+    top: 0px;
+    z-index: 1000;
+}
+
+
+.details {
+    display: flex;
+    gap: 1rem;
+    margin-right: auto;
+    color: grey;
+}
+
+.active {
+    color: black;
+}
+
+.auth {
+    display: flex;
+    gap: 1.3rem;
+    text-decoration: underline;
+}
+
+.auth h1 {
+    cursor: pointer;
+}
+
+main {
+    background-image: url('logo.JPG');
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    background-position: start;
+    background-color: darkcyan;
+    padding-bottom: 8rem;
+}
+
+.heading {
+    line-height: 60vw;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: clamp(1.5rem, 7vw, 6rem);
+    font-weight: bolder;
+    text-decoration:underline;
+    color: yellow;
+    padding: 2rem;
+    white-space: nowrap;
+
+    animation: slideIn 01s ease-out forwards;
+}
+
+.content h3 {
+    padding: 2rem;
+    color: white;
+    max-width: 1600px;
+    margin: auto;
+    line-height: 1.6rem;
+    font-weight: 100;
+}
+
+.cards {
+    margin-top: 80px;
+    display: flex;
+    justify-content: space-evenly;
+    gap: 30px;
+}
+
+.card {
+    max-width: 24rem;
+    min-width: 16rem;
+    width:26vw;
+    min-height: 24rem;
+    padding: 16px;
+    border-radius: 10px;
+    background-color: bisque;
+    transition-timing-function: ease-in-out;
+    transition-duration: 0.3s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transform: translateY(30px);
+    opacity: 0;
+    transition: all 0.6s ease-out;
+}
+
+.card.show {
+    transform: translateY(0);
+    opacity: 1;
+}
+.card:hover {
+    transform: translateY(0) scale(1.1);
+}
+
+
+.product-name {
+    color:darkcyan;
+    font-size: 3rem;
+    text-align: center;
+    margin: 10px;
+}
+
+.product-desc {
+    text-align: justify;
+    padding: 12px;
+}
+
+hr {
+    width: 100%;
+    margin-top: auto;
+}
+
+.buy {
+    height: 2.4rem;
+    width: 4.6rem;
+    background-color: transparent;
+    border-width: 0.1rem;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.buy:hover {
+    background-color: coral;
+    border: none;
+    color: white;
+}
+
+
+footer {
+    width: 100vw;
+    background-color: #f5f5f7;
+}
+
+.footer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem 7rem 0 7rem;
+    max-width: 1200px;
+    width: 80vw;
+    margin:auto;
+    padding: 22px;
+}
+.footer-container hr {
+    margin: 10px;
+}
+
+.about {
+    color: grey;
+    font-size: 0.9rem;;
+}
+
+.list {
+    display: flex;
+    justify-content: space-between;
+    gap: 26px;
+    flex-wrap: wrap;
+}
+
+.list ul {
+    min-width: 10rem;
+}
+
+.list li {
+    color: grey;
+    font-size: 1rem;
+    list-style: none;
+}
+
+.policies {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    color: grey;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.location {
+    margin-left: auto;
+}
+
+
+
+
+
+
+
+
+
+@keyframes slideIn {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+@media(max-width: 1000px) {
+    .cards {
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        gap: 30px;
+    }
+
+    .card {
+        width: 50vw;
+    }
+}
+
+@media(max-width: 680px) {
+    .details {
+        display: none;
+    }
+    .auth {
+        gap: 2rem;
+    }
+    .about {
+        display: none;
+    }
+}
+
+
+
+
+
+
+
+
+
+
