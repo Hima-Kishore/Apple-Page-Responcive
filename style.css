@@ -58,7 +58,7 @@ main {
 }
 
 .heading {
-    line-height: 50vh;
+    line-height: 50vw;
     text-align: center;
     font-family: 'Courier New', Courier, monospace;
     font-size: clamp(1.5rem, 7vw, 6rem);
